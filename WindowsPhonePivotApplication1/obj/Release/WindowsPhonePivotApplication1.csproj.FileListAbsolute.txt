@@ -1,0 +1,15 @@
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Bin\Release\ApplicationIcon.png
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Bin\Release\Background.png
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Bin\Release\GodvilleSimpleMonitor.dll
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Bin\Release\GodvilleSimpleMonitor.pdb
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Bin\Release\AppManifest.xaml
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Bin\Release\GodvilleSimpleMonitor.xap
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Bin\Release\Microsoft.Phone.Controls.dll
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Bin\Release\Microsoft.Phone.Controls.xml
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\ResolveAssemblyReference.cache
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\App.g.i.cs
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\MainPage.g.i.cs
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.g.resources
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.dll
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.pdb
+g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\XapCacheFile.xml
