@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<xapCache source="G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Bin\Release\GodvilleSimpleMonitor.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="24.02.2011 21:17:42">
   <file source="G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="23.02.2011 21:02:39" />
   <file source="G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.dll" archivePath="GodvilleSimpleMonitor.dll" lastWriteTime="24.02.2011 21:04:01" />
@@ -6,4 +7,14 @@
   <file source="G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Background.png" archivePath="Background.png" lastWriteTime="23.02.2011 21:02:39" />
   <file source="G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="23.02.2011 21:02:39" />
   <file source="G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="24.02.2011 21:04:04" />
+=======
+﻿<xapCache source="g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Bin\Release\GodvilleSimpleMonitor.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="23.02.2011 18:59:12">
+  <file source="g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="20.02.2011 18:12:29" />
+  <file source="g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.dll" archivePath="GodvilleSimpleMonitor.dll" lastWriteTime="23.02.2011 18:59:12" />
+  <file source="E:\Program Files\Microsoft SDKs\Windows Phone\v7.0\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="01.09.2010 3:51:10" />
+  <file source="g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="08.02.2011 21:41:09" />
+  <file source="g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Background.png" archivePath="Background.png" lastWriteTime="08.02.2011 21:41:09" />
+  <file source="g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="08.02.2011 21:41:09" />
+  <file source="g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="20.02.2011 18:58:29" />
+>>>>>>> 999a2dc5f318d49ea20e9936819ba48c9c66b7b2
 </xapCache>

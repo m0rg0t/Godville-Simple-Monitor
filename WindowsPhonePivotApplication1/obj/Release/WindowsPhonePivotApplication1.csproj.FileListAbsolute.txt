@@ -13,6 +13,7 @@ g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotAp
 g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.dll
 g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.pdb
 g:\visual studio 2010\Projects\WindowsPhonePivotApplication1\WindowsPhonePivotApplication1\obj\Release\XapCacheFile.xml
+<<<<<<< HEAD
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Bin\Release\ApplicationIcon.png
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Bin\Release\Background.png
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Bin\Release\GodvilleSimpleMonitor.dll
@@ -28,3 +29,5 @@ G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\Win
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.dll
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.pdb
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\XapCacheFile.xml
+=======
+>>>>>>> 999a2dc5f318d49ea20e9936819ba48c9c66b7b2
