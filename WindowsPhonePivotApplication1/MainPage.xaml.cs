@@ -22,23 +22,6 @@ namespace WindowsPhonePivotApplication1
         {
             InitializeComponent();
 
-            // Set the data context of the listbox control to the sample data
-            DataContext = App.ViewModel;
-            this.Loaded += new RoutedEventHandler(MainPage_Loaded);
-        }
-
-        // Load data for the ViewModel Items
-        private void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (!App.ViewModel.IsDataLoaded)
-            {
-                App.ViewModel.LoadData();
-            }
-        }
-
-        private void FirstListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
 
         private void btnCheckGod_Click(object sender, RoutedEventArgs e)
@@ -92,9 +75,11 @@ namespace WindowsPhonePivotApplication1
                     this.HeroOutput.Text = this.HeroOutput.Text + "Задание " + GetDataFromXML("quest", e);
                     this.HeroOutput.Text = this.HeroOutput.Text + "Процент выполнения " + GetDataFromXML("quest_progress", e);
 
+                    this.InventaryOutput.Text = this.InventaryOutput.Text + GetDataFromXML("item", e);
+
                     this.OutputAnswer.Text = "Данные о герое получены";
                 }
-                catch (System.Net.WebException de)
+                catch (System.Net.WebException)
                 {
                     this.OutputAnswer.Text = "Информация о герое недоступна";
                 }
