@@ -19,18 +19,18 @@
         <!--Pivot Control-->
         <controls:Pivot Title="Godville simple monitor">
 
-            <controls:PivotItem Header="Настройки">
+            <controls:PivotItem Header="Settings">
                 <Grid>
-                <TextBlock x:Name="TrackNumber" Text="Имя бога" Margin="12,6,-3,564" />
+                <TextBlock x:Name="TrackNumber" Text="God's name" Margin="12,6,-3,564" />
                 <TextBox x:Name="GodName" Text="" Margin="-6,42,0,484" />
-                <Button x:Name="btnCheckGod" Canvas.Top="60" Canvas.Left="30" Content="Проверить героя" Margin="-6,115,0,388" HorizontalAlignment="Left" Width="462" Click="btnCheckGod_Click"></Button>
+                <Button x:Name="btnCheckGod" Canvas.Top="60" Canvas.Left="30" Content="Check hero" Margin="-6,115,0,388" HorizontalAlignment="Left" Width="462" Click="btnCheckGod_Click"></Button>
                 <ScrollViewer Margin="6,225,6,6">
                     <TextBlock TextWrapping="Wrap" x:Name="OutputAnswer" Text="" Width="433" />
                 </ScrollViewer>
                 </Grid>
             </controls:PivotItem>
 
-            <controls:PivotItem Header="Дневник">
+            <controls:PivotItem Header="Diary">
                 <Grid>
                     <ScrollViewer Margin="6" Height="595">
                         <TextBlock TextWrapping="Wrap" x:Name="DiaryOutput" Text="" Width="433" Height="566" />
@@ -39,7 +39,7 @@
             </controls:PivotItem>
  
             <!--Pivot item two-->
-            <controls:PivotItem Header="Герой">
+            <controls:PivotItem Header="Hero">
                 <Grid>
                     <ScrollViewer Margin="6" Height="595">
                         <TextBlock TextWrapping="Wrap" x:Name="HeroOutput" Text="" Width="433" Height="566" />
@@ -47,7 +47,7 @@
                 </Grid>
             </controls:PivotItem>
 
-            <controls:PivotItem Header="Инвентарь">
+            <controls:PivotItem Header="Inventary">
                 <Grid>
                     <ScrollViewer Margin="6" Height="595">
                         <TextBlock TextWrapping="Wrap" x:Name="InventaryOutput" Text="" Width="433" Height="566" />

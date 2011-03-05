@@ -70,24 +70,24 @@ namespace WindowsPhonePivotApplication1
 
                     this.DiaryOutput.Text += "\r\n" + GetDataFromXML("diary_last", e);
 
-                    this.HeroOutput.Text = "Герой " + GetDataFromXML("name", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Бог " + GetDataFromXML("godname", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Пол " + GetDataFromXML("gender", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Денег " + GetDataFromXML("gold_approx", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Уровень " + GetDataFromXML("level", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Здоровье " + GetDataFromXML("health", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Максимум здоровья " + GetDataFromXML("max_health", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Мировозрение " + GetDataFromXML("alignment", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Задание " + GetDataFromXML("quest", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Процент выполнения " + GetDataFromXML("quest_progress", e);
+                    this.HeroOutput.Text = "Hero " + GetDataFromXML("name", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "God " + GetDataFromXML("godname", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Sex " + GetDataFromXML("gender", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Money " + GetDataFromXML("gold_approx", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Level " + GetDataFromXML("level", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Health " + GetDataFromXML("health", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Max health " + GetDataFromXML("max_health", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Alignment " + GetDataFromXML("alignment", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Quest " + GetDataFromXML("quest", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Quest progress " + GetDataFromXML("quest_progress", e);
 
                     this.InventaryOutput.Text = GetDataFromXML("item", e);
 
-                    this.OutputAnswer.Text = "Данные о герое получены" + "\r\n";
+                    this.OutputAnswer.Text = "Get data about hero" + "\r\n";
                 }
                 catch (System.Net.WebException)
                 {
-                    this.OutputAnswer.Text = "Информация о герое недоступна";
+                    this.OutputAnswer.Text = "Can't get data about hero, sorry";
                 }
             }
         }
