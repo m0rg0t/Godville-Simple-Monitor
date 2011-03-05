@@ -12,34 +12,40 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using System.IO;
 using System.Xml;
+using System.Threading; 
 
 namespace WindowsPhonePivotApplication1
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        private int phase = 0;
+        private Timer t;
+        private string Godname;
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-
+            
         }
+
+        private void MyTimerCallback(object state)
+        {
+            
+            WebClient web = new WebClient();
+            web.DownloadStringAsync(new Uri("http://godville.net/gods/api/" + Godname + ".xml"));
+            web.DownloadStringCompleted += new DownloadStringCompletedEventHandler(web_DownloadStringCompleted);
+        }
+
 
         private void btnCheckGod_Click(object sender, RoutedEventArgs e)
         {
-            //string websiteURL;
-            //websiteURL = "http://www.usps.com/shipping/trackandconfirm.htm";
-            //websiteURL = "http://trkcnfrm1.smi.usps.com/PTSInternetWeb/InterLabelInquiry.do";
-
-            //this.OutputAnswer.Text = "Results:\n";
-
             WebClient web = new WebClient();
-            //string str = "strOrigTrackNum=CJ301795892US&Go+to+Track+%26+Confirm.x=20&Go+to+Track+%26+Confirm.y=7&Go+to+Track+%26+Confirm=Go";
-            //WebClient rest = new WebClient();
+
             web.DownloadStringAsync(new Uri("http://godville.net/gods/api/"+this.GodName.Text+".xml"));
             web.DownloadStringCompleted += new DownloadStringCompletedEventHandler(web_DownloadStringCompleted);
-
-            //web.OpenReadAsync(new Uri(websiteURL + "?strOrigTrackNum=" + this.trackcode.Text));
-            //web.OpenReadCompleted += new OpenReadCompletedEventHandler(web_OpenReadCompleted);
+            Godname = this.GodName.Text;
+            t = new Timer(MyTimerCallback, null, 60000, 60000); //lets start timer to get updates about hero
         }
 
         string GetDataFromXML(string type, DownloadStringCompletedEventArgs e)
@@ -48,7 +54,7 @@ namespace WindowsPhonePivotApplication1
             XmlReader r = XmlReader.Create(new MemoryStream(System.Text.UnicodeEncoding.UTF8.GetBytes(e.Result)));
             while (r.ReadToFollowing(type))
             {
-                data = data + r.ReadElementContentAsString() + "\r\n"; ;
+                data = data + r.ReadElementContentAsString() + "\r\n"; 
             };
             r.Close();
             return data;
@@ -62,26 +68,26 @@ namespace WindowsPhonePivotApplication1
                 {
                     string s = e.Result;
 
-                    this.DiaryOutput.Text = GetDataFromXML("diary_last", e);
+                    this.DiaryOutput.Text += "\r\n" + GetDataFromXML("diary_last", e);
 
-                    this.HeroOutput.Text = "Герой " + GetDataFromXML("name", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Бог " + GetDataFromXML("godname", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Пол " + GetDataFromXML("gender", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Денег " + GetDataFromXML("gold_approx", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Уровень " + GetDataFromXML("level", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Здоровье " + GetDataFromXML("health", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Максимум здоровья " + GetDataFromXML("max_health", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Мировозрение " + GetDataFromXML("alignment", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Задание " + GetDataFromXML("quest", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Процент выполнения " + GetDataFromXML("quest_progress", e);
+                    this.HeroOutput.Text = "Hero " + GetDataFromXML("name", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "God " + GetDataFromXML("godname", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Sex " + GetDataFromXML("gender", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Money " + GetDataFromXML("gold_approx", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Level " + GetDataFromXML("level", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Health " + GetDataFromXML("health", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Max health " + GetDataFromXML("max_health", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Alignment " + GetDataFromXML("alignment", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Quest " + GetDataFromXML("quest", e);
+                    this.HeroOutput.Text = this.HeroOutput.Text + "Quest progress " + GetDataFromXML("quest_progress", e);
 
-                    this.InventaryOutput.Text = this.InventaryOutput.Text + GetDataFromXML("item", e);
+                    this.InventaryOutput.Text = GetDataFromXML("item", e);
 
-                    this.OutputAnswer.Text = "Данные о герое получены";
+                    this.OutputAnswer.Text = "Get data about hero" + "\r\n";
                 }
                 catch (System.Net.WebException)
                 {
-                    this.OutputAnswer.Text = "Информация о герое недоступна";
+                    this.OutputAnswer.Text = "Can't get data about hero, sorry";
                 }
             }
         }
