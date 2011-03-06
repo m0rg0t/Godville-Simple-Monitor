@@ -35,6 +35,7 @@
                     <ScrollViewer Margin="6" Height="595">
                         <TextBlock TextWrapping="Wrap" x:Name="DiaryOutput" Text="" Width="433" Height="566" />
                     </ScrollViewer>
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="18,-13,0,0" Name="textBlock1" Text="Diary records" VerticalAlignment="Top" />
                 </Grid>
             </controls:PivotItem>
  
