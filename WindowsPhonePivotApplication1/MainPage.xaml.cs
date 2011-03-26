@@ -67,19 +67,22 @@ namespace WindowsPhonePivotApplication1
                 try
                 {
                     string s = e.Result;
-
+                    //this.HeroData.Visibility;
                     this.DiaryOutput.Text += "\r\n" + GetDataFromXML("diary_last", e);
 
-                    this.HeroOutput.Text = "Hero " + GetDataFromXML("name", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "God " + GetDataFromXML("godname", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Sex " + GetDataFromXML("gender", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Money " + GetDataFromXML("gold_approx", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Level " + GetDataFromXML("level", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Health " + GetDataFromXML("health", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Max health " + GetDataFromXML("max_health", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Alignment " + GetDataFromXML("alignment", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Quest " + GetDataFromXML("quest", e);
-                    this.HeroOutput.Text = this.HeroOutput.Text + "Quest progress " + GetDataFromXML("quest_progress", e);
+                    this.HeroOutput1.Text = "Hero " + GetDataFromXML("name", e);
+                    this.HeroOutput2.Text = "God " + GetDataFromXML("godname", e);
+                    this.HeroOutput3.Text = "Sex " + GetDataFromXML("gender", e);
+                    this.HeroOutput4.Text = "Money " + GetDataFromXML("gold_approx", e);
+                    this.HeroOutput5.Text = "Level " + GetDataFromXML("level", e);
+                    this.HeroOutput6.Text = "Health "+GetDataFromXML("health", e);
+                    this.HealthBar.Maximum = double.Parse(GetDataFromXML("max_health", e));
+                    this.HealthBar.Value = double.Parse(GetDataFromXML("health", e));
+                    //this.HeroOutput7.Text = "Max health " + GetDataFromXML("max_health", e);
+                    this.HeroOutput8.Text = "Alignment " + GetDataFromXML("alignment", e);
+                    this.HeroOutput9.Text = "Quest " + GetDataFromXML("quest", e);
+                    this.HeroOutput10.Text = "Quest progress";
+                    this.QuestBar.Value = double.Parse(GetDataFromXML("quest_progress", e));
 
                     this.InventaryOutput.Text = GetDataFromXML("item", e);
 

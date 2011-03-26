@@ -40,10 +40,23 @@
             </controls:PivotItem>
  
             <!--Pivot item two-->
-            <controls:PivotItem Header="Hero">
+            <controls:PivotItem Header="Hero" x:Name="Hero">
                 <Grid>
-                    <ScrollViewer Margin="6" Height="595">
-                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput" Text="" Width="433" Height="566" />
+                    <ScrollViewer Margin="6" Height="595" x:Name="HeroScroll">
+                        <StackPanel Margin="20" Visibility="Visible" x:Name="HeroData">
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput1" Text="" Width="433" Height="30" />
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput2" Text="" Width="433" Height="30" />
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput3" Text="" Width="433" Height="30" />
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput4" Text="" Width="433" Height="30" />
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput5" Text="" Width="433" Height="30" />
+                            <TextBlock TextWrapping="Wrap" x:Name="HeroOutput6" Text="" Width="433" Height="30" />
+                            <ProgressBar Height="4" Name="HealthBar" Width="433" />
+                            <!--<TextBlock TextWrapping="Wrap" x:Name="HeroOutput7" Text="" Width="433" Height="30" />=-->
+                            <TextBlock TextWrapping="Wrap" x:Name="HeroOutput8" Text="" Width="433" Height="30" />
+                            <TextBlock TextWrapping="Wrap" x:Name="HeroOutput9" Text="" Width="433" Height="30" />
+                            <TextBlock TextWrapping="Wrap" x:Name="HeroOutput10" Text="" Width="433" Height="30" />
+                            <ProgressBar Height="4" Name="QuestBar" Width="433" />
+                        </StackPanel>
                     </ScrollViewer>
                 </Grid>
             </controls:PivotItem>
@@ -56,6 +69,7 @@
                 </Grid>
             </controls:PivotItem>
         </controls:Pivot>
+        
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
