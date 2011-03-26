@@ -12,7 +12,8 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using System.IO;
 using System.Xml;
-using System.Threading; 
+using System.Threading;
+using Google.AdMob.Ads.WindowsPhone7;
 
 namespace WindowsPhonePivotApplication1
 {

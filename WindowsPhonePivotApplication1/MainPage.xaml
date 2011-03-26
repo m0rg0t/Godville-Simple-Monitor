@@ -27,6 +27,7 @@
                 <ScrollViewer Margin="6,225,6,6">
                     <TextBlock TextWrapping="Wrap" x:Name="OutputAnswer" Text="" Width="433" />
                 </ScrollViewer>
+                    <google:BannerAd xmlns:google="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7" AdUnitID="a14db1c07e8f36d" Margin="-15,529,-9,4" Height="74" />
                 </Grid>
             </controls:PivotItem>
 
@@ -36,14 +37,15 @@
                         <TextBlock TextWrapping="Wrap" x:Name="DiaryOutput" Text="" Width="433" Height="566" />
                     </ScrollViewer>
                     <TextBlock Height="30" HorizontalAlignment="Left" Margin="18,-13,0,0" Name="textBlock1" Text="Diary records" VerticalAlignment="Top" />
+                    <google:BannerAd xmlns:google="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7" AdUnitID="a14db1c07e8f36d" Margin="-15,529,-9,4" Height="74" />
                 </Grid>
             </controls:PivotItem>
  
             <!--Pivot item two-->
             <controls:PivotItem Header="Hero" x:Name="Hero">
                 <Grid>
-                    <ScrollViewer Margin="6" Height="595" x:Name="HeroScroll">
-                        <StackPanel Margin="20" Visibility="Visible" x:Name="HeroData">
+                    <ScrollViewer Height="595" x:Name="HeroScroll">
+                        <StackPanel Visibility="Visible" x:Name="HeroData">
                         <TextBlock TextWrapping="Wrap" x:Name="HeroOutput1" Text="" Width="433" Height="30" />
                         <TextBlock TextWrapping="Wrap" x:Name="HeroOutput2" Text="" Width="433" Height="30" />
                         <TextBlock TextWrapping="Wrap" x:Name="HeroOutput3" Text="" Width="433" Height="30" />
@@ -53,11 +55,14 @@
                             <ProgressBar Height="4" Name="HealthBar" Width="433" />
                             <!--<TextBlock TextWrapping="Wrap" x:Name="HeroOutput7" Text="" Width="433" Height="30" />=-->
                             <TextBlock TextWrapping="Wrap" x:Name="HeroOutput8" Text="" Width="433" Height="30" />
-                            <TextBlock TextWrapping="Wrap" x:Name="HeroOutput9" Text="" Width="433" Height="30" />
-                            <TextBlock TextWrapping="Wrap" x:Name="HeroOutput10" Text="" Width="433" Height="30" />
+                            <ScrollViewer Height="60">
+                    <TextBlock TextWrapping="Wrap" x:Name="HeroOutput9" Text="" Width="433" Height="400" />
+                    </ScrollViewer>
+                    <TextBlock TextWrapping="Wrap" x:Name="HeroOutput10" Text="" Width="433" Height="30" />
                             <ProgressBar Height="4" Name="QuestBar" Width="433" />
                         </StackPanel>
                     </ScrollViewer>
+                    <google:BannerAd xmlns:google="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7" AdUnitID="a14db1c07e8f36d" Margin="-15,529,-9,4" Height="74" />
                 </Grid>
             </controls:PivotItem>
 
@@ -66,10 +71,11 @@
                     <ScrollViewer Margin="6" Height="595">
                         <TextBlock TextWrapping="Wrap" x:Name="InventaryOutput" Text="" Width="433" Height="566" />
                     </ScrollViewer>
+                    <google:BannerAd xmlns:google="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7" AdUnitID="a14db1c07e8f36d" Margin="-15,529,-9,4" Height="74" />
+
                 </Grid>
             </controls:PivotItem>
         </controls:Pivot>
-        
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
@@ -84,4 +90,5 @@
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>-->
 
+    
 </phone:PhoneApplicationPage>

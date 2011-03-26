@@ -13,3 +13,5 @@ G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\Win
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.dll
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.pdb
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\XapCacheFile.xml
+G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Bin\Release\Google.AdMob.Ads.WindowsPhone7.dll
+G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Bin\Release\Google.AdMob.Ads.WindowsPhone7.xml
