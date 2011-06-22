@@ -15,11 +15,73 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <!--<Grid x:Name="LayoutRoot" Background="Transparent">-->
         <!--Pivot Control-->
-        <controls:Pivot Title="Godville simple monitor">
+        <controls:Panorama Title="Godville Simple Monitor" FontSize="20" Foreground="Black">
+        <controls:Panorama.Background>
+            <ImageBrush ImageSource="PanoramaBackground.png"/>
+        </controls:Panorama.Background>
+        <!--Panorama item one-->
+            <controls:PanoramaItem Header="Settings">
+                <Grid>
+                    <TextBlock x:Name="TrackNumber" Text="God's name" Margin="12,6,-3,423" />
+                    <TextBox x:Name="GodName" Text="" Margin="-6,36,0,348" />
+                    <Button x:Name="btnCheckGod" Canvas.Top="60" Canvas.Left="30" Content="Check hero" Margin="-4,106,0,0" HorizontalAlignment="Left" Width="421" Click="btnCheckGod_Click" Height="79" VerticalAlignment="Top" BorderBrush="Black" Foreground="Black"></Button>
+                    <ScrollViewer Margin="6,169,16,66">
+                        <TextBlock TextWrapping="Wrap" x:Name="OutputAnswer" Text="" Width="386" Height="213" />
+                    </ScrollViewer>
+                    
+                </Grid>
+            </controls:PanoramaItem>
 
-            <controls:PivotItem Header="Settings">
+            <!--Panorama item two-->
+            <controls:PanoramaItem Header="Diary">
+                <Grid>
+                    <ScrollViewer Margin="6" Height="595">
+                        <TextBlock TextWrapping="Wrap" x:Name="DiaryOutput" Text="" Width="400" Height="564" />
+                    </ScrollViewer>
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="18,-13,0,0" Name="textBlock1" Text="Diary records" VerticalAlignment="Top" />
+                    
+                </Grid>
+            </controls:PanoramaItem>
+            
+            <controls:PanoramaItem Header="Hero">
+            <Grid>
+                <ScrollViewer Height="595" x:Name="HeroScroll">
+                    <StackPanel Visibility="Visible" x:Name="HeroData">
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput1" Text="" Width="400" Height="30" />
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput2" Text="" Width="400" Height="30" />
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput3" Text="" Width="400" Height="30" />
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput4" Text="" Width="400" Height="30" />
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput5" Text="" Width="400" Height="30" />
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput6" Text="" Width="400" Height="30" />
+                        <ProgressBar Height="4" Name="HealthBar" Width="433" />
+                        <!--<TextBlock TextWrapping="Wrap" x:Name="HeroOutput7" Text="" Width="433" Height="30" />=-->
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput8" Text="" Width="400" Height="30" />
+                        <ScrollViewer Height="60">
+                            <TextBlock TextWrapping="Wrap" x:Name="HeroOutput9" Text="" Width="400" Height="400" />
+                        </ScrollViewer>
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput10" Text="" Width="400" Height="30" />
+                        <ProgressBar Height="4" Name="QuestBar" Width="400" />
+                    </StackPanel>
+                </ScrollViewer>
+                
+            </Grid>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="Inventary">
+            <Grid>
+                <ScrollViewer Margin="6" Height="595">
+                    <TextBlock TextWrapping="Wrap" x:Name="InventaryOutput" Text="" Width="400" Height="566" />
+                </ScrollViewer>
+                
+            </Grid>
+            </controls:PanoramaItem>
+
+        </controls:Panorama>
+        <!--<controls:Pivot Title="Godville simple monitor">-->
+
+            <!--<controls:PivotItem Header="Settings">
                 <Grid>
                 <TextBlock x:Name="TrackNumber" Text="God's name" Margin="12,6,-3,564" />
                 <TextBox x:Name="GodName" Text="" Margin="-6,42,0,484" />
@@ -29,9 +91,9 @@
                 </ScrollViewer>
                     <google:BannerAd xmlns:google="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7" AdUnitID="a14db1c07e8f36d" Margin="-15,529,-9,4" Height="74" />
                 </Grid>
-            </controls:PivotItem>
+            </controls:PivotItem>-->
 
-            <controls:PivotItem Header="Diary">
+            <!--<controls:PivotItem Header="Diary">
                 <Grid>
                     <ScrollViewer Margin="6" Height="595">
                         <TextBlock TextWrapping="Wrap" x:Name="DiaryOutput" Text="" Width="433" Height="566" />
@@ -39,10 +101,10 @@
                     <TextBlock Height="30" HorizontalAlignment="Left" Margin="18,-13,0,0" Name="textBlock1" Text="Diary records" VerticalAlignment="Top" />
                     <google:BannerAd xmlns:google="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7" AdUnitID="a14db1c07e8f36d" Margin="-15,529,-9,4" Height="74" />
                 </Grid>
-            </controls:PivotItem>
+            </controls:PivotItem>-->
  
             <!--Pivot item two-->
-            <controls:PivotItem Header="Hero" x:Name="Hero">
+            <!--<controls:PivotItem Header="Hero" x:Name="Hero">
                 <Grid>
                     <ScrollViewer Height="595" x:Name="HeroScroll">
                         <StackPanel Visibility="Visible" x:Name="HeroData">
@@ -53,7 +115,6 @@
                         <TextBlock TextWrapping="Wrap" x:Name="HeroOutput5" Text="" Width="433" Height="30" />
                             <TextBlock TextWrapping="Wrap" x:Name="HeroOutput6" Text="" Width="433" Height="30" />
                             <ProgressBar Height="4" Name="HealthBar" Width="433" />
-                            <!--<TextBlock TextWrapping="Wrap" x:Name="HeroOutput7" Text="" Width="433" Height="30" />=-->
                             <TextBlock TextWrapping="Wrap" x:Name="HeroOutput8" Text="" Width="433" Height="30" />
                             <ScrollViewer Height="60">
                     <TextBlock TextWrapping="Wrap" x:Name="HeroOutput9" Text="" Width="433" Height="400" />
@@ -64,9 +125,9 @@
                     </ScrollViewer>
                     <google:BannerAd xmlns:google="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7" AdUnitID="a14db1c07e8f36d" Margin="-15,529,-9,4" Height="74" />
                 </Grid>
-            </controls:PivotItem>
+            </controls:PivotItem>-->
 
-            <controls:PivotItem Header="Inventary">
+            <!--<controls:PivotItem Header="Inventary">
                 <Grid>
                     <ScrollViewer Margin="6" Height="595">
                         <TextBlock TextWrapping="Wrap" x:Name="InventaryOutput" Text="" Width="433" Height="566" />
@@ -74,9 +135,9 @@
                     <google:BannerAd xmlns:google="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7" AdUnitID="a14db1c07e8f36d" Margin="-15,529,-9,4" Height="74" />
 
                 </Grid>
-            </controls:PivotItem>
-        </controls:Pivot>
-    </Grid>
+            </controls:PivotItem>-->
+        <!--</controls:Pivot>
+    </Grid>-->
  
     <!--Sample code showing usage of ApplicationBar-->
     <!--<phone:PhoneApplicationPage.ApplicationBar>
