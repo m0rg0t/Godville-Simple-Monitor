@@ -13,8 +13,10 @@ G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\Win
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.dll
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.pdb
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\XapCacheFile.xml
-G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Bin\Release\Google.AdMob.Ads.WindowsPhone7.dll
-G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Bin\Release\Google.AdMob.Ads.WindowsPhone7.xml
-G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.Resource1.resources
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GenerateResource.read.1.tlog
 G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GenerateResource.write.1.tlog
+G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.AppResources.resources
+G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.AppResources.ru.resources
+G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\GodvilleSimpleMonitor.Resource1.resources
+G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\Bin\Release\ru\GodvilleSimpleMonitor.resources.dll
+G:\Visual Studio 2010\Projects\GodvilleSimpleMonitor\Godville-Simple-Monitor\WindowsPhonePivotApplication1\obj\Release\ru\GodvilleSimpleMonitor.resources.dll

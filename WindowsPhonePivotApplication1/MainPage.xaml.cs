@@ -14,9 +14,11 @@ using System.IO;
 using System.Xml;
 using System.Threading;
 using Google.AdMob.Ads.WindowsPhone7;
+using System.Globalization;
 
-namespace WindowsPhonePivotApplication1
+namespace GodvilleSimpleMonitor
 {
+
     public partial class MainPage : PhoneApplicationPage
     {
         private int phase = 0;
@@ -51,14 +53,21 @@ namespace WindowsPhonePivotApplication1
 
         string GetDataFromXML(string type, DownloadStringCompletedEventArgs e)
         {
-            string data = "";
-            XmlReader r = XmlReader.Create(new MemoryStream(System.Text.UnicodeEncoding.UTF8.GetBytes(e.Result)));
-            while (r.ReadToFollowing(type))
+            try
             {
-                data = data + r.ReadElementContentAsString() + "\r\n"; 
+                string data = "";
+                XmlReader r = XmlReader.Create(new MemoryStream(System.Text.UnicodeEncoding.UTF8.GetBytes(e.Result)));
+                while (r.ReadToFollowing(type))
+                {
+                    data = data + r.ReadElementContentAsString() + "\r\n";
+                };
+                r.Close();
+                return data;
+            }
+            catch
+            {
+                return "0";
             };
-            r.Close();
-            return data;
         }
 
         void web_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
@@ -78,12 +87,12 @@ namespace WindowsPhonePivotApplication1
                     this.HeroOutput5.Text = "Level " + GetDataFromXML("level", e);
                     this.HeroOutput6.Text = "Health "+GetDataFromXML("health", e);
                     this.HealthBar.Maximum = double.Parse(GetDataFromXML("max_health", e));
-                    this.HealthBar.Value = double.Parse(GetDataFromXML("health", e));
-                    //this.HeroOutput7.Text = "Max health " + GetDataFromXML("max_health", e);
+                    //this.HealthBar.Value = double.Parse(GetDataFromXML("health", e));
+                    this.HealthBar.Value = '0';
                     this.HeroOutput8.Text = "Alignment " + GetDataFromXML("alignment", e);
                     this.HeroOutput9.Text = "Quest " + GetDataFromXML("quest", e);
-                    this.HeroOutput10.Text = "Quest progress";
-                    this.QuestBar.Value = double.Parse(GetDataFromXML("quest_progress", e));
+                    //this.HeroOutput10.Text = "Quest progress";
+                    //this.QuestBar.Value = double.Parse(GetDataFromXML("quest_progress", e));
 
                     this.InventaryOutput.Text = GetDataFromXML("item", e);
 
@@ -95,6 +104,19 @@ namespace WindowsPhonePivotApplication1
                 }
             }
         }
+
+        private void about_Click(object sender, RoutedEventArgs e)
+        {
+            //AboutPrompt about = new AboutPrompt();
+            //about.Completed += about_Completed;
+            //about.Show("Anton Lenev", "@m0rg0t", "m0rg0t.Anton@gmail.com", @"http://m0rg0t.ru");
+            MessageBox.Show("Author - Anton Lenev (m0rg0t) \nhttp://m0rg0t.ru \nm0rg0t.Anton@gmail.com \n\n As background image used: Незавершенный набросок карты Годвилля. Скетч - Зефирка. Наложил на папирус - Floyd311");
+        }
+
+        //void about_Completed(object sender, PopUpEventArgs<object, PopUpResult> e)
+        //{
+        //    //add some code here
+        //}
 
    
     }

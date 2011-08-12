@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="WindowsPhonePivotApplication1.MainPage"
+    x:Class="GodvilleSimpleMonitor.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -26,19 +26,22 @@
                 <Grid>
                     <TextBlock x:Name="TrackNumber" Text="God's name" Margin="12,6,-3,423" />
                     <TextBox x:Name="GodName" Text="" Margin="-6,36,0,348" />
+                    <google:BannerAd
+    xmlns:google="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7"
+    AdUnitID="MY_AD_UNIT_ID" Margin="6,180,14,0" Height="73" VerticalAlignment="Top"></google:BannerAd>
                     <Button x:Name="btnCheckGod" Canvas.Top="60" Canvas.Left="30" Content="Check hero" Margin="-4,106,0,0" HorizontalAlignment="Left" Width="421" Click="btnCheckGod_Click" Height="79" VerticalAlignment="Top" BorderBrush="Black" Foreground="Black"></Button>
-                    <ScrollViewer Margin="6,169,16,66">
-                        <TextBlock TextWrapping="Wrap" x:Name="OutputAnswer" Text="" Width="386" Height="213" />
+                    <ScrollViewer Margin="6,323,16,19">
+                        <TextBlock TextWrapping="Wrap" x:Name="OutputAnswer" Text="To get data about hero, you need to login in browser at http://godville.net, after it client would work for some time (Godville API requiriment)" Width="389" Height="110" />
                     </ScrollViewer>
-                    
-                </Grid>
+                <Button Name="about" Content="About" Height="72" HorizontalAlignment="Left" Canvas.Left="30" Margin="-4,252,0,0" VerticalAlignment="Top" Width="414" BorderBrush="Black" Foreground="Black" Click="about_Click" />
+            </Grid>
             </controls:PanoramaItem>
 
             <!--Panorama item two-->
             <controls:PanoramaItem Header="Diary">
                 <Grid>
                     <ScrollViewer Margin="6" Height="595">
-                        <TextBlock TextWrapping="Wrap" x:Name="DiaryOutput" Text="" Width="400" Height="564" />
+                    <TextBlock TextWrapping="Wrap" x:Name="DiaryOutput" Text="зайдите в профиль и включите для своего подопечного выдачу в API оперативных данных." Width="400" Height="564" />
                     </ScrollViewer>
                     <TextBlock Height="30" HorizontalAlignment="Left" Margin="18,-13,0,0" Name="textBlock1" Text="Diary records" VerticalAlignment="Top" />
                     
@@ -49,6 +52,7 @@
             <Grid>
                 <ScrollViewer Height="595" x:Name="HeroScroll">
                     <StackPanel Visibility="Visible" x:Name="HeroData">
+                        <TextBlock TextWrapping="Wrap" x:Name="HeroOutput0" Text="зайдите в профиль и включите для своего подопечного выдачу в API оперативных данных." Width="400"  />
                         <TextBlock TextWrapping="Wrap" x:Name="HeroOutput1" Text="" Width="400" Height="30" />
                         <TextBlock TextWrapping="Wrap" x:Name="HeroOutput2" Text="" Width="400" Height="30" />
                         <TextBlock TextWrapping="Wrap" x:Name="HeroOutput3" Text="" Width="400" Height="30" />

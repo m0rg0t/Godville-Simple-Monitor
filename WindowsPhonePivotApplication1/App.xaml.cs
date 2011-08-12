@@ -12,9 +12,12 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Globalization;
+using GodvilleSimpleMonitor.Localization;
 
-namespace WindowsPhonePivotApplication1
+namespace GodvilleSimpleMonitor
 {
+
     public partial class App : Application
     {
 
