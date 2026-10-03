@@ -56,12 +56,20 @@ namespace GodvilleSimpleMonitor
             try
             {
                 string data = "";
-                XmlReader r = XmlReader.Create(new MemoryStream(System.Text.UnicodeEncoding.UTF8.GetBytes(e.Result)));
-                while (r.ReadToFollowing(type))
+                using (XmlReader r = XmlReader.Create(new MemoryStream(System.Text.UnicodeEncoding.UTF8.GetBytes(e.Result))))
                 {
-                    data = data + r.ReadElementContentAsString() + "\r\n";
-                };
-                r.Close();
+                    while (!r.EOF)
+                    {
+                        if (r.IsStartElement(type))
+                        {
+                            data = data + r.ReadElementContentAsString() + "\r\n";
+                        }
+                        else
+                        {
+                            r.Read();
+                        }
+                    }
+                }
                 return data;
             }
             catch
@@ -86,9 +94,9 @@ namespace GodvilleSimpleMonitor
                     this.HeroOutput4.Text = "Money " + GetDataFromXML("gold_approx", e);
                     this.HeroOutput5.Text = "Level " + GetDataFromXML("level", e);
                     this.HeroOutput6.Text = "Health "+GetDataFromXML("health", e);
-                    this.HealthBar.Maximum = double.Parse(GetDataFromXML("max_health", e));
+                    this.HealthBar.Maximum = double.Parse(GetDataFromXML("max_health", e), CultureInfo.InvariantCulture);
                     //this.HealthBar.Value = double.Parse(GetDataFromXML("health", e));
-                    this.HealthBar.Value = '0';
+                    this.HealthBar.Value = double.Parse(GetDataFromXML("health", e), CultureInfo.InvariantCulture);
                     this.HeroOutput8.Text = "Alignment " + GetDataFromXML("alignment", e);
                     this.HeroOutput9.Text = "Quest " + GetDataFromXML("quest", e);
                     //this.HeroOutput10.Text = "Quest progress";
